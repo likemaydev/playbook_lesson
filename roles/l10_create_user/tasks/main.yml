@@ -1,0 +1,9 @@
+- name: Add user "testuser" to remote server
+  user:
+    name: testuser
+    comment: "Lesson 10"
+    uid: 2009
+    group: ubuntu 
+    append: yes
+    shell: /bin/bash
+    password: asdqwe123

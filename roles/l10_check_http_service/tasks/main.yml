@@ -1,0 +1,4 @@
+- name: Nginx status
+  command: systemctl status nginx
+  ignore_errors: yes
+

@@ -1,0 +1,20 @@
+- name: Install proftpd
+  apt:
+    name=proftpd
+    state=latest
+  notify: Restart proftpd
+
+- copy:
+    src: /home/ansible/playbook_lesson/roles/l10_install_ftp/files/ftp.msg 
+    dest: /srv/ftp/ftp.msg
+    owner: root
+    group: root
+    mode: 0644
+
+- copy:
+    src: /home/ansible/playbook_lesson/roles/l10_install_ftp/files/proftpd.conf
+    dest: /etc/proftpd/proftpd.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes

@@ -1,0 +1,14 @@
+- name: Remove file from remote server
+  file:
+    path: /tmp/hello.txt
+    state: absent
+
+- name: Delete user "testuser"
+  user:
+    name: testuser 
+    state: absent
+
+- name: Delete Nginx
+  apt:
+    name: nginx
+    state: absent 

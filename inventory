@@ -1,0 +1,15 @@
+[all]
+ansible1
+ansible2
+ansible3
+
+[web]
+ansible1
+ansible2
+
+[db]
+ansible3
+
+[all:children]
+web
+db

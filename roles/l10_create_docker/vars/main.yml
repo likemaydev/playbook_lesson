@@ -1,0 +1,4 @@
+create_containers: 3 
+default_container_name: docker
+default_container_image: centos
+default_container_command: sleep 1d

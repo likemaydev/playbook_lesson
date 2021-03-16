@@ -1,0 +1,20 @@
+---
+- hosts: 
+    db 
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    ansible
+  roles:
+   - l10_get_hw
+   - l10_create_user
+   - l10_install_nginx
+   - l10_copy_file
+   - l10_delete_all
+   - l10_create_docker
+   - l10_install_ftp
+   - l10_check_http_service

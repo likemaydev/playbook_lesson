@@ -1,0 +1,6 @@
+- copy:
+    src: /home/ansible/playbook_lesson/roles/l10_copy_file/files/hello.txt 
+    dest: /tmp/hello.txt
+    owner: ansible
+    group: ansible
+    mode: 0644

@@ -1,0 +1,10 @@
+- name: Show hostname
+  debug:
+     var=ansible_hostname
+
+- name: HW info
+  vars:
+    msg: |
+       CPU Core: {{ ansible_processor_cores }}
+  debug:
+     msg: "{{ msg.split('\n') }}"
