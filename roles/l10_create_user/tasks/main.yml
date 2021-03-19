@@ -7,3 +7,4 @@
     append: yes
     shell: /bin/bash
     password: asdqwe123
+  tags: l10_create_user_tag

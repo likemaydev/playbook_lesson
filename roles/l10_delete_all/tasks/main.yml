@@ -2,13 +2,16 @@
   file:
     path: /tmp/hello.txt
     state: absent
+  tags: l10_delete_all_tag
 
 - name: Delete user "testuser"
   user:
     name: testuser 
     state: absent
+  tags: l10_delete_all_tag
 
 - name: Delete Nginx
   apt:
-    name: nginx
-    state: absent 
+    name: nginx-core
+    state: absent
+  tags: l10_delete_all_tag

@@ -1,6 +1,7 @@
 - name: Show hostname
   debug:
      var=ansible_hostname
+  tags: l10_get_hw_tag
 
 - name: HW info
   vars:
@@ -8,3 +9,4 @@
        CPU Core: {{ ansible_processor_cores }}
   debug:
      msg: "{{ msg.split('\n') }}"
+  tags: l10_get_hw_tag 

@@ -3,6 +3,16 @@
     name=proftpd
     state=latest
   notify: Restart proftpd
+  tags: l10_install_ftp_tag
+
+- name: Create /srv/ftp dir
+  file:
+    path: /srv/ftp
+    state: directory
+    mode: 0775
+    owner: root
+    group: root
+  tags: l10_install_ftp_tag
 
 - copy:
     src: /home/ansible/playbook_lesson/roles/l10_install_ftp/files/ftp.msg 
@@ -10,6 +20,7 @@
     owner: root
     group: root
     mode: 0644
+  tags: l10_install_ftp_tag
 
 - copy:
     src: /home/ansible/playbook_lesson/roles/l10_install_ftp/files/proftpd.conf
@@ -18,3 +29,4 @@
     group: root
     mode: 0644
     backup: yes
+  tags: l10_install_ftp_tag

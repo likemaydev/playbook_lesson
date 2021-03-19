@@ -1,36 +1,44 @@
 - name: Install aptitude using apt
   apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
+  tags: l10_create_docker_tag
 
 - name: Install required system packages
   apt: name={{ item }} state=latest update_cache=yes
   loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools', 'python-setuptools']
+  tags: l10_create_docker_tag
 
 - name: Add Docker GPG apt Key
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
+  tags: l10_create_docker_tag
 
 - name: Add Docker Repository
   apt_repository:
     repo: deb https://download.docker.com/linux/ubuntu xenial stable
     state: present
+  tags: l10_create_docker_tag
 
 - name: Update apt and install docker-ce
   apt: update_cache=yes name=docker-ce state=latest
+  tags: l10_create_docker_tag
 
 - name: Install Docker Module for Python
   pip:
     name: docker
+  tags: l10_create_docker_tag
 
 - name: Pull default Docker image
   docker_image:
     name: "{{ default_container_image }}"
     source: pull
+  tags: l10_create_docker_tag
 
 - name: pull an image
   docker_image:
     name: pacur/centos-7
     source: pull
+  tags: l10_create_docker_tag
 
 - name: Create default containers
   docker_container:
@@ -39,3 +47,4 @@
      command: "{{ default_container_command }}"
      state: present
   with_sequence: count={{ create_containers }}
+  tags: l10_create_docker_tag

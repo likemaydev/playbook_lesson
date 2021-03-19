@@ -1,4 +1,10 @@
-- name: Nginx status
+- name: Check nginx status 
   command: systemctl status nginx
   ignore_errors: yes
+  register: result
+  tags: l10_check_http_service_tag
 
+- name: Show nginx status
+  debug:
+    var: result
+  tags: l10_check_http_service_tag

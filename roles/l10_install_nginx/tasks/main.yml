@@ -4,3 +4,4 @@
     state=latest
   notify:
     - nginx systemd
+  tags: l10_install_nginx_tag
