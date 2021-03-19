@@ -28,7 +28,7 @@ ansible3                   : ok=3    changed=0    unreachable=0    failed=0    s
 ## 2. Create user/install nginx
 
 
-`ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_create_user_tag`
+##### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_create_user_tag`
 ```
 PLAY [db] *****************************************************************************************************************
 
@@ -43,7 +43,7 @@ changed: [ansible3]
 PLAY RECAP ****************************************************************************************************************
 ansible3                   : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
-`ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_install_nginx_tag`
+##### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_install_nginx_tag`
 ```
 PLAY [db] *****************************************************************************************************************
 
@@ -62,7 +62,7 @@ ansible3                   : ok=3    changed=1    unreachable=0    failed=0    s
 ```
 
 ## 3. Copy file to remote server
-`ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_copy_file_tag`
+##### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_copy_file_tag`
 ```
 PLAY [db] *****************************************************************************************************************
 
@@ -77,7 +77,7 @@ ansible3                   : ok=2    changed=1    unreachable=0    failed=0    s
 ```
 
 ## 4. Delete file, user. Uninstall nginx
-`ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_delete_all_tag`
+##### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_delete_all_tag`
 ```
 PLAY [db] *****************************************************************************************************************
 
@@ -98,7 +98,7 @@ ansible3                   : ok=4    changed=3    unreachable=0    failed=0    s
 ```
 
 ## 5. Create Docker containers
-`ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_create_docker_tag`
+##### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_create_docker_tag`
 ```
 PLAY [db] *****************************************************************************************************************
 
@@ -143,7 +143,7 @@ changed: [ansible3] => (item=3)
 ```
 
 ## 6. Install proftpd and add "Hello" message
-`ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_install_ftp_tag`
+##### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_install_ftp_tag`
 ```
 PLAY [db] *****************************************************************************************************************
 
@@ -185,7 +185,7 @@ ftp>
 ```
 
 ## 7. Check http service
-`ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_check_http_service_tag`
+##### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_check_http_service_tag`
 ```
 PLAY [db] *****************************************************************************************************************
 
