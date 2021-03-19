@@ -1,7 +1,7 @@
 # playbook_lesson
 
 ## 1. Get CPU info
-#### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_get_hw_tag`
+##### `ansible@ansible-ctl:~/playbook_lesson$ ansible-playbook lesson10.yml -i inventory -l db --tags l10_get_hw_tag`
 ```
 PLAY [db] *****************************************************************************************************************
 
